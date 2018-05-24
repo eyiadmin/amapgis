@@ -22,7 +22,7 @@ namespace Bingosoft.AMap.Web.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var group = _groupService.getGroup();
+            var group = _groupService.getGroupTreeData();
             return Ok(group);
         }
 

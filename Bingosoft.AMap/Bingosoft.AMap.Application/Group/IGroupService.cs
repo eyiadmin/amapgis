@@ -8,5 +8,7 @@ namespace Bingosoft.AMap.Application.Group
     public interface IGroupService
     {
         List<GroupOutputDto> getGroup();
+
+        List<ComboTreeOutputDto> getGroupTreeData();
     }
 }
