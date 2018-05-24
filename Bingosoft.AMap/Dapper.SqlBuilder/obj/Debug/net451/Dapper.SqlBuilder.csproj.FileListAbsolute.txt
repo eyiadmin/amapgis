@@ -1,0 +1,10 @@
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\net451\Dapper.SqlBuilder.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\net451\Dapper.SqlBuilder.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\net451\Dapper.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\net451\Dapper.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.csprojResolveAssemblyReference.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.csproj.CoreCompileInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.AssemblyInfoInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.AssemblyInfo.cs
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\net451\Dapper.SqlBuilder.pdb

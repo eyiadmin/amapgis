@@ -1,0 +1,11 @@
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\bin\Debug\netstandard1.3\Dapper.Rainbow.deps.json
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\bin\Debug\netstandard1.3\Dapper.Rainbow.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\bin\Debug\netstandard1.3\Dapper.Rainbow.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\bin\Debug\netstandard1.3\Dapper.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\bin\Debug\netstandard1.3\Dapper.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.csprojResolveAssemblyReference.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.csproj.CoreCompileInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.AssemblyInfoInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.AssemblyInfo.cs
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.Rainbow\obj\Debug\netstandard1.3\Dapper.Rainbow.pdb

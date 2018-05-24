@@ -1,0 +1,2069 @@
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Learn how to build ASP.NET apps that can run anywhere.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        There are powerful new features in Visual Studio for building modern web apps.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Application uses</h2>
+            <ul>
+                <li>Sample pages using ASP.NET Core MVC</li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side libraries</li>
+                <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>How to</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699318">Add client packages using Bower.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Overview</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Run &amp; Deploy</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
+            </ul>
+        </div>
+    </div>*@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>天坛</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <link rel="stylesheet" href="~/lib/easyui/themes/metro/easyui.css" />
+    <link rel="stylesheet" href="~/lib/easyui/themes/icon.css" />
+    <link rel="stylesheet" href="~/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="~/css/index.css" />
+
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+
+    <style type="text/css">
+        .amap-marker-label {
+            width: 60px;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            height: 18px;
+            font-family: STLiti;
+            color: green;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: solid 2px rgba(100, 255, 200, 0.8);
+        }
+
+        .combox-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://webapi.amap.com/maps?v=1.4.6&key=ed22f67b67df5304ecf28049b5ba2e1e&plugin=AMap.PolyEditor"></script>
+    <script type="text/javascript" src='https://a.amap.com/jsapi_demos/static/resource/js/tiantan.js'></script>
+    <!-- <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script> -->
+    <script src="http://lib.sinaapp.com/js/jquery/2.2.4/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body id="cc" class="easyui-layout">
+
+    <div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:10px;">
+        <ul id="demo"></ul>
+    </div>
+    <div data-options="region:'center'">
+        <div class="btnGroup">
+            <span class="btnBack"><a href="javascript:parent.toParentNode();"><img class="fanhui" src="./back1.png" alt="返回"></a></span>
+            <span class="btnTool"><a href="javascript:"><img class="tools" src="./tool.png" alt="系统工具"></a></span>
+            <span class="btnPersonal"><a href="javascript:"><img class="person" src="./personal.png" alt="个人中心"></a></span>
+        </div>
+        <div class="btns">
+
+            <div class="personCenter">
+                <div style="border-bottom: 1px solid #dadada;">个人中心</div>
+                <div><a href="http://wzzc.zj.chinamobile.com/manage/manage/index/manage/wgyx_toBMap.do#" onclick="showMyMarketing()" class="myMarket">我的营销</a></div>
+                <div><a href="javascript:;" onclick="showAllMarketing(this)" id="allMarking" class="myMarket">所有营销</a></div>
+            </div>
+        </div>
+        <div class="myMenu">
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns slqd">
+                <i></i>
+                <span>重点业务</span>
+                <em></em>
+                <div id="slqd" class="subMenu" style="display: none;">
+                    <div class="tl">重点业务</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="市场大势">市场大势：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="slqd_scds_ltfe" onclick="showColorWin('ltfe',this);" href="#">移动累通份额(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_ydxzfe" onclick="showColorWin('ydxzfe',this);" href="#">移动月有效新增份额(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_ltfeygsd" onclick="showColorWin('ltfeygsd',this);" href="#">累通份额月改善度(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_ltfengsd" onclick="showColorWin('ltfengsd',this);" href="#">移动累通份额年改善(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_dxltfe" onclick="showColorWin('dianxinfe',this);" href="#">电信累通份额(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_dxxzfe" onclick="showColorWin('dxxzfe',this);" href="#">电信月有效新增份额(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_dxltfengsd" onclick="showColorWin('dxltfengsd',this);" href="#">电信累通份额年改善(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_ltltfe" onclick="showColorWin('liantongfe',this);" href="#">联通累通份额(%)</a>
+                                        <a id="slqd_scds_ltxzfe" onclick="showColorWin('ltxzfe',this);" href="#">联通月有效新增份额(%)</a>
+                                        <a id="slqd_scds_ltltfengsd" onclick="showColorWin('ltltfengsd',this);" href="#">联通累通份额年改善(%)</a>
+                                        <a id="slqd_scds_ydrtfe" onclick="showColorWin('ydrtfe',this);" href="#">移动日通份额(%)</a>
+                                        <a id="slqd_scds_ydrtfenbd" onclick="showColorWin('ydrtfenbd',this);" href="#">移动日通份额年变动(%)</a>
+                                        <a id="slqd_scds_ydyhbjzfe" onclick="showColorWin('ydyhbjzfe',this);" href="#">移动月环比净增份额(%)</a>
+                                        <a id="slqd_scds_ydnljjzfe" onclick="showColorWin('ydnljjzfe',this);" href="#">移动年累计净增份额(%)</a>
+                                        <a id="slqd_scds_hwyxcgl" onclick="showColorWin('hwyxcgl',this);" href="#">回温营销成功率(%)</a>
+                                        <a id="slqd_scds_test" onclick="showColorWin('test',this);" href="#">测试色阶</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="家庭市场">家庭市场：</td>
+                                    <td class="item">
+                                        <a id="slqd_jtsc_kdszl" onclick="showColorWin('kdszl',this);" href="#">宽带实装率(%)</a>
+                                        <a id="slqd_jtsc_kdRealInstallRatioImprove" onclick="showColorWin('kdRealInstallRatioImprove',this);" href="#">宽带实装率月改善度(%)</a>
+                                        <a id="slqd_jtsc_kdLose" onclick="showColorWin('kdLose',this);" href="#">宽带流失率(%)</a>
+                                        <a id="slqd_jtsc_kdLoseImprove" onclick="showColorWin('kdLoseImprove',this);" href="#">宽带流失率月改善度(%)</a>
+                                        <a id="slqd_jtsc_kddsPermeability" onclick="showColorWin('kddsPermeability',this);" href="#">宽带电视渗透率(%)</a>
+                                        <a id="slqd_jtsc_kddsPermeabilityImprove" onclick="showColorWin('kddsPermeabilityImprove',this);" href="#">宽带电视渗透率月改善度(%)</a>
+                                        <a id="slqd_jtsc_kdCPlanRemoveRatio" onclick="showColorWin('kdCPlanRemoveRatio',this);" href="#">宽带C计划消除率(%)</a>
+                                        <a id="slqd_tdnl_kdjgl" onclick="showColorWin('kdCompleteRatio',this);" href="#">宽带竣工率(%)</a>
+                                        <a id="slqd_tdnl_kdhyl" onclick="showColorWin('kdActiveRatio',this);" href="#">宽带活跃率(%)</a>
+                                        <a id="slqd_tdnl_cjl" onclick="showColorWin('cjl',this);" href="#">宽带拆机率(%)</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="4G业务">4G业务：</td>
+                                    <td class="item">
+                                        <a id="slqd_4gyw_g4hystl" onclick="showColorWin('g4hystl',this);" href="#">活跃渗透率(%)</a>
+                                        <a id="slqd_4gyw_g4zdystl" onclick="showColorWin('g4zdstl',this);" href="#">终端渗透率(%)</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="流量业务">流量业务：</td>
+                                    <td class="item">
+                                        <a id="slqd_llyw_mgakhystl" onclick="showColorWin('mgakhystl',this);" href="#">咪咕活跃渗透率(%)</a>
+                                        <a id="slqd_llyw_g4zfystl" onclick="showColorWin('g4zfstl',this);" href="#">资费渗透率(%)</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="stl" title="通道能力">通道能力：</td>
+                                    <td class="item">
+                                        <a id="slqd_tdnl_kdcdbll" onclick="showColorWin('kdcdbll',this);" href="#">宽带触点办理率(%)</a>
+                                        <a id="slqd_tdnl_kkqdzb" onclick="showColorWin('kkqdzb',this);" href="#">渠道可控占比(%)</a>
+                                        <a id="slqd_tdnl_yxqdkkzb" onclick="showColorWin('yxqdkkzb',this);" href="#">有效渠道可控占比(%)</a>
+                                        <a id="slqd_tdnl_cdfgl" onclick="showColorWin('cdfgl',this);" href="#">触点覆盖率(%)</a>
+                                        <a id="slqd_tdnl_qdcdyldbl" onclick="showColorWin('qdcdyldbl',this);" href="#">渠道触点引流达标率(%)</a>
+                                        <a id="slqd_tdnl_dcdyhjfl" onclick="showColorWin('dcdyhjfl',this);" href="#">单触点用户积分率(%)</a>
+                                        <a id="slqd_tdnl_cdccl" onclick="showColorWin('cdccl',this);" href="#">触点促成率(%)</a>
+                                        <a id="slqd_tdnl_qdcdccdbl" onclick="showColorWin('qdcdccdbl',this);" href="#">渠道触点促成达标率(%)</a>
+                                        <a id="slqd_tdnl_dcdrhjfl" onclick="showColorWin('dcdrhjfl',this);" href="#">单触点融合积分率(%)</a>
+                                        <a id="slqd_tdnl_cdrhdbl" onclick="showColorWin('cdrhdbl',this);" href="#">触点融合达标率(%)</a>
+                                        <a id="slqd_tdnl_qdcdrhdbl" onclick="showColorWin('qdcdrhdbl',this);" href="#">渠道触点融合达标率(%)</a>
+                                        <a id="slqd_tdnl_zdcddbl" onclick="showColorWin('zdcddbl',this);" href="#">终端触点达标率(%)</a>
+                                        <a id="slqd_tdnl_fhcddbl" onclick="showColorWin('fhcddbl',this);" href="#">放号触点达标率(%)</a>
+                                        <a id="slqd_tdnl_kdcddbl" onclick="showColorWin('kdcddbl',this);" href="#">宽带触点达标率(%)</a>
+                                        <a id="slqd_tdnl_clcddbl" onclick="showColorWin('clcddbl',this);" href="#">存量触点达标率(%)</a>
+                                        <a id="slqd_tdnl_provideRatio" onclick="showColorWin('provideRatio',this);" href="#">放号份额(%)</a>
+                                        <a id="slqd_tdnl_broadbandRatio" onclick="showColorWin('broadbandRatio',this);" href="#">宽带份额(%)</a>
+                                        <a id="slqd_tdnl_terminalRatio" onclick="showColorWin('terminalRatio',this);" href="#">终端份额(%)</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="stl" title="资源点色阶">资源点色阶：</td>
+                                    <td class="item">
+                                        <a id="slqd_zydsj_xjnl" title="4-5星绿色、2-3星黄色、1星红色" onclick="trogglePoiPic('qyqd','starLevel',['>=4--_1S','>=2,<=3--_1','<=1--_1X']);"
+                                           href="#">星级能力</a>
+                                        <a id="slqd_zydsj_jfwcnl" title="≥100%，高；80-90%，中；＜80%，低" onclick="trogglePoiPic('qyqd,ydzyt,ydhzt,ydjmt','scoreCmpeRatio',['>=0.9--_1S','>=0.8,<0.9--_1','<0.8--_1X']);"
+                                           href="#">积分完成能力</a>
+                                        <a id="slqd_zydsj_jfgsd" title="有改善；无改善" onclick="trogglePoiPic('qyqd,ydzyt,ydhzt,ydjmt','isScoreImprove',['==\'有改善\'--_1S','==\'无改善\'--_1X']);"
+                                           href="#">积分改善度</a>
+                                        <a id="slqd_zydsj_cdyl" title="达标；不达标" onclick="trogglePoiPic('qyqd','isCdylDb',['==\'是\'--_1S','==\'否\'--_1X']);" href="#">触点引流</a>
+                                        <a id="slqd_zydsj_cdcc" title="达标；不达标" onclick="trogglePoiPic('qyqd','isCdccDb',['==\'是\'--_1S','==\'否\'--_1X']);" href="#">触点促成</a>
+                                        <a id="slqd_zydsj_cdrh" title="达标；不达标" onclick="trogglePoiPic('qyqd','isCdrhDb',['==\'是\'--_1S','==\'否\'--_1X']);" href="#">触点融合</a>
+                                        <a id="slqd_zydsj_fhnl" title="前20%、中20%-60%、后40%" onclick="trogglePoiPic('qyqd,dxyyt,dxhzt,dxqyqd,ltyyt,lthzt,ltqyqd','fhnl',['==\'前20%\'--_1S','==\'中20%—60%\'--_1','==\'后40%\'--_1X']);"
+                                           href="#">放号能力</a>
+                                        <a id="slqd_zydsj_zdnl" title="前20%、中20%-60%、后40%" onclick="trogglePoiPic('qyqd,dxyyt,dxhzt,dxqyqd,ltyyt,lthzt,ltqyqd','zdnl',['==\'前20%\'--_1S','==\'中20%—60%\'--_1','==\'后40%\'--_1X']);"
+                                           href="#">终端能力</a>
+                                        <a id="slqd_zydsj_kdnl" title="前20%、中20%-60%、后40%" onclick="trogglePoiPic('qyqd,dxyyt,dxhzt,dxqyqd,ltyyt,lthzt,ltqyqd','kdnl',['==\'前20%\'--_1S','==\'中20%—60%\'--_1','==\'后40%\'--_1X']);"
+                                           href="#">宽带能力</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="政企业务">政企业务：</td>
+                                    <td class="item">
+                                        <a id="slqd_zqyw_zqzxfgl" onclick="showColorWin('zqzxfgl',this);" href="#">专线覆盖率(%)</a>
+                                        <a id="slqd_zqyw_zqjkstl" onclick="showColorWin('zqjkstl',this);" href="#">家宽渗透率(%)</a>
+                                        <a id="slqd_zqyw_zq4gfzhyl" onclick="showColorWin('zq4gfzhyl',this);" href="#">4G发展活跃率(%)</a>
+                                        <a id="slqd_zqyw_zq4gfzstl" onclick="showColorWin('zq4gfzstl',this);" href="#">4G发展终端渗透率(%)</a>
+                                        <a id="slqd_zqyw_zqllyy50yhzb" onclick="showColorWin('zqllyy50yhzb',this);" href="#">流量运营(%)</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_zqyw_zqwlwjrfzzb" onclick="showColorWin('wlwzb',this);" href="#">物联网接入发展占比（%）</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns zqcj">
+                <i></i>
+                <span>精确营销</span>
+                <em></em>
+                <div id="zqcj" class="subMenu" style="display: none;">
+                    <div class="tl">精确营销</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="宽带模型">宽带模型：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yhcj_gmqy_kd780mbyhs" title="KD780目标用户数/宽带C计划目标" onclick="toggleLabelType('kd780mbyhs',this);" href="#">疑似友商宽带客户</a>
+
+
+
+
+
+
+
+                                        <a id="yhcj_gmqy_kddsTar" title="宽带电视新增目标用户数" onclick="toggleLabelType('kddsTar',this);" href="#">宽带电视易营销客户</a>
+
+
+
+
+
+
+
+                                        <a id="yhcj_gmqy_kdReNewTar" title="宽带续费目标" onclick="toggleLabelType('kdReNewTar',this);" href="#">宽带到期用户</a>
+
+
+
+
+
+
+
+                                        <a id="yhcj_gmqy_kdImproveSpeedTar" onclick="toggleLabelType('kdImproveSpeedTar',this);" href="#">宽带待提速客户</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="4G模型">4G模型：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yhcj_gmqy_zcjmbyhs" title="政策机目标用户数" onclick="toggleLabelType('zcjmbyhs',this);" href="#">2/3G待迁移客户</a>
+
+
+
+
+
+
+
+                                        <a id="yhcj_gmqy_zhmbyhs" title="转化目标用户数" onclick="toggleLabelType('zhmbyhs',this);" href="#">4G沉默客户</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="大势模型">大势模型：</td>
+                                    <td class="item">
+                                        <a id="yhcj_gmqy_jtywmbyhs" title="友商总目标用户数" onclick="toggleLabelType('jtywmbyhs',this);" href="#">友商高流量客户</a>
+                                        <a id="yhcj_gmqy_mrmbyhs" title="漫入目标" onclick="toggleLabelType('mrmbyhs',this);" href="#">外地漫入客户</a>
+                                        <a id="yhcj_gmqy_twoCardTar" title="二卡槽目标用户数" onclick="toggleLabelType('twoCardTar',this);" href="#">全网通二卡槽客户</a>
+                                        <a id="yhcj_gmqy_ymrs" title="月漫入数" onclick="toggleLabelType('ymrs',this);" href="#">月漫入数</a>
+                                        <a id="yhcj_gmqy_dwdwxkh" title="低稳待维系客户" onclick="toggleLabelType('dwdwxkh',this);" href="#">低稳待维系客户</a>
+                                        <a id="yhcj_gmqy_wgnyhsl" title="网格内用户数" onclick="toggleLabelType('wgnyhsl',this);" href="#">网格内用户数</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns yhcj">
+                <i class=""></i>
+                <span>场景营销</span>
+                <em></em>
+                <div id="yhcj" class="subMenu" style="display: none;">
+                    <div class="tl">场景营销</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="营销场景">营销场景：</td>
+                                    <td class="item">
+                                        <a id="yh_cj_zzxq" onclick="showTdByType(14,'住宅小区',this);" href="#">住宅小区</a>
+                                        <a id="yh_cj_xjlp" onclick="showTdByType(14,'新建楼盘',this);" href="#">新建楼盘</a>
+                                        <a id="cj_gy_gd" onclick="showTdByType(14,'工地',this);" href="#">工地</a>
+                                        <a id="cj_yx_xy" onclick="showTdByType(14,'校园',this);" href="#">校园</a>
+                                        <a id="cj_yx_xwqy" onclick="showTdByType(14,'小微企业',this);" href="#">小微企业</a>
+                                        <a id="cj_yx_jgsydw" onclick="showTdByType(14,'机关事业单位',this);" href="#">机关事业单位</a>
+                                        <a id="cj_yx_nc" onclick="showTdByType(14,'农村',this);" href="#">农村</a>
+                                        <a id="yh_cj_cx" onclick="showYhcjMarketInfo()" href="#">场景查询</a>
+
+
+
+
+
+
+
+                                        <a id="yh_cj_xccj" onclick="loadXcPoi(this);" href="#">加载宣传点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="工&nbsp;业&nbsp;&nbsp;区">工&nbsp;业&nbsp;&nbsp;区：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_gy_gyqbj" onclick="showTdByType(14,'工业区边界',this);" href="#">工业区边界</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_gyqcf" onclick="showTdByType(14,'工业区厂房',this);" href="#">工业区厂房</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_st" onclick="showTdByType(14,'【信息】食堂',this);" href="#">【信息】食堂</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_ss" onclick="showTdByType(14,'【信息】宿舍',this);" href="#">【信息】宿舍</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_xcd" onclick="showTdByType(14,'【信息】宣传点',this);" href="#">【信息】宣传点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="周边场景">周边场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_xx_yscc" title="normal" onclick="showTdByType(14,'【信息】菜场',this);" href="#">【信息】菜场</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_cs" title="normal" onclick="showTdByType(14,'【信息】超市',this);" href="#">【信息】超市</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_bld" title="normal" onclick="showTdByType(14,'【信息】便利店',this);" href="#">【信息】便利店</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_yd" title="normal" onclick="showTdByType(14,'【信息】药店',this);" href="#">【信息】药店</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_jtsn" title="normal" onclick="showTdByType(14,'【信息】交通枢纽',this);" href="#">【信息】交通枢纽</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_gwzx" title="normal" onclick="showTdByType(14,'【信息】购物中心',this);" href="#">【信息】购物中心</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_dgtpd" title="normal" onclick="showTdByType(14,'【信息】蛋糕甜品店',this);" href="#">【信息】蛋糕甜品店</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_zht" title="normal" onclick="showTdByType(14,'【信息】综合体',this);" href="#">【信息】综合体</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_rlslfb" title="normal" onclick="heat.show(7,'',this);" href="#">人流数量分布</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="聚&nbsp;居&nbsp;&nbsp;区">聚&nbsp;居&nbsp;&nbsp;区：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_gy_jjq" onclick="showTdByType(14,'聚居区',this);" href="#">聚居区</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_qzf" onclick="showTdByType(14,'【信息】群租房',this);" href="#">【信息】群租房</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_wgjtcd" onclick="showTdByType(14,'务工交通触点',this);" href="#">务工交通触点</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_jsjh" onclick="showTdByType(14,'【信息】集市集会',this);" href="#">【信息】集市集会</a>
+
+
+
+
+
+
+
+                                        <a id="cj_gy_wlwg" onclick="showTdByType(14,'外来务工【排摸】',this);" href="#">外来务工【排摸】</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_chezhan" onclick="showTdByType(14,'【信息】车站',this);" href="#">【信息】车站</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_mt" onclick="showTdByType(14,'【信息】码头',this);" href="#">【信息】码头</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_zjs" onclick="showTdByType(14,'【信息】职介所',this);" href="#">【信息】职介所</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="农村场景">农村场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cjyx_nccj_zdnc" onclick="showSceneByType(14,'农村','重点农村',this);" href="#">重点农村</a>
+
+
+
+
+
+
+
+                                        <a id="cjyx_nccj_zxxzc" onclick="showSceneByType(14,'农村','中心乡镇村',this);" href="#">中心乡镇村</a>
+
+
+
+
+
+
+
+                                        <a id="cjyx_nccj_ejxzc" onclick="showSceneByType(14,'农村','二级乡镇村',this);" href="#">二级乡镇村</a>
+
+
+
+
+
+
+
+                                        <a id="cjyx_nccj_ybnc" onclick="showSceneByType(14,'农村','一般农村',this);" href="#">一般农村</a>
+
+
+
+
+
+
+
+                                        <a id="cjyx_nccj_jxnc" onclick="showSceneByType(14,'农村','极小农村',this);" href="#">极小农村</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="人流热点">人流热点：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_xx_ysrlrd1" onclick="showTdByType(14,'疑似人流热点',this,'1号');" href="#">疑似人流热点(1日)</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_ysrlrd2" onclick="showTdByType(14,'疑似人流热点',this,'12点');" href="#">疑似人流热点(12点)</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_ysrlrd3" onclick="showTdByType(14,'疑似人流热点',this,'19点');" href="#">疑似人流热点(19点)</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_ys" onclick="showTdByType(14,'【信息】夜市',this);" href="#">【信息】夜市</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_cc" onclick="showTdByType(14,'【收集】菜场',this);" href="#">【收集】菜场</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_yshddd" onclick="showTdByType(14,'【信息】友商活动地点',this);" href="#">【信息】友商活动地点</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xx_qtrlrd" onclick="showTdByType(14,'【信息】其他人流热点',this);" href="#">【信息】其他人流热点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="宽带场景">宽带场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="kdzyd0" onclick="showKdzyByType(1,this);" href="#">0%资源点</a>
+
+
+
+
+
+
+
+                                        <a id="kdzyd1" onclick="showKdzyByType(1,this);" href="#">0%-25%资源点</a>
+
+
+
+
+
+
+
+                                        <a id="kdzyd2" onclick="showKdzyByType(1,this);" href="#">25%-75%资源点</a>
+
+
+
+
+
+
+
+                                        <a id="kdzyd3" onclick="showKdzyByType(1,this);" href="#">75%-100%资源点</a>
+
+
+
+
+
+
+
+                                        <a id="kdzyd4" onclick="showKdzyByType(1,this);" href="#">100%资源点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="校园场景">校园场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_xy_gx" onclick="showTdByType(14,'校园',this);" href="#">高校</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_zjx" onclick="showTdByType(14,'校园',this);" href="#">职技校</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_pxjg" onclick="showTdByType(14,'校园',this);" href="#">培训机构</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_yey" onclick="showTdByType(14,'校园',this);" href="#">幼儿园</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_xx" onclick="showTdByType(14,'校园',this);" href="#">小学</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_cz" onclick="showTdByType(14,'校园',this);" href="#">初中</a>
+
+
+
+
+
+
+
+                                        <a id="cj_xy_gz" onclick="showTdByType(14,'校园',this);" href="#">高中</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="和包场景">和包场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="hb_cj_zln" onclick="showTdByType(12,'中老年',this);" href="#">中老年</a>
+
+
+
+
+
+
+
+                                        <a id="hb_cj_hbsp" onclick="showTdByType(12,'和包商铺',this);" href="#">和包商铺</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="友商场景">友商场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="ys_cj_qswg" onclick="showTdByType(9,'强势网格',this);" href="#">强势网格</a>
+
+
+
+
+
+
+
+                                        <a id="ys_cj_clwg" onclick="showTdByType(9,'冲量网格',this);" href="#">冲量网格</a>
+
+
+
+
+
+
+
+                                        <a id="ys_cj_lswg" onclick="showTdByType(9,'流失网格',this);" href="#">流失网格</a>
+
+
+
+
+
+
+
+                                        <a id="ys_cj_stjt" onclick="showTdByType(9,'渗透集团',this);" href="#">渗透集团</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="综合场景">综合场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yh_cj_cxcj" onclick="showTdByType(10,'出行场景',this);" href="#">出行场景</a>
+
+
+
+
+
+
+
+                                        <a id="yh_cj_xfcj" onclick="showTdByType(10,'消费场景',this);" href="#">消费场景</a>
+
+
+
+
+
+
+
+                                        <a id="yh_cj_fxrcj" onclick="showTdByType(10,'发薪日场景',this);" href="#">发薪日场景</a>
+
+
+
+
+
+
+
+                                        <a id="yh_cj_xccj" onclick="showTdByType(10,'宣传场景',this);" href="#">宣传场景</a>
+
+
+
+
+
+
+
+                                        <a id="yh_cj_yskdcj" onclick="showTdByType(14,'友商宽带场景',this);" href="#">友商宽带场景</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="政企场景">政企场景：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="cj_zq_gmqy" onclick="showTdByType(7,'规模企业',this);" href="#">规模企业</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_jgqsydw" onclick="showTdByType(7,'机关企事业单位',this);" href="#">机关企事业单位</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_lsxwqy" onclick="showTdByType(7,'零散小微企业',this);" href="#">零散小微企业</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_xxjpxjg" onclick="showTdByType(7,'学校及培训机构',this);" href="#">学校及培训机构</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_zwjt" onclick="showTdByType(7,'在网集团',this);" href="#">在网集团</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_ywjt" onclick="showTdByType(7,'异网集团',this);" href="#">异网集团</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_wlw" onclick="showTdByType(7,'物联网',this);" href="#">物联网</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_nbjz" title="NB基站" onclick="showTdByType(7,'NB基站',this);" href="#">NB基站</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_zdqy" title="重点企业" onclick="showTdByType(7,'重点企业',this);" href="#">重点企业</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_rlt" title="热力图展示" onclick="heat.show(7,'',this);" href="#">热力图</a>
+
+
+
+
+
+
+
+                                        <a id="cj_zq_ly" title="楼宇信息" onclick="showTdByType(14,'【信息】楼宇',this);" href="#">【信息】楼宇</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns tdtx">
+                <i></i>
+                <span>通道体系</span>
+                <em></em>
+                <div id="tdtx" class="subMenu" style="display: none;">
+                    <div class="tl">通道体系</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="社会渠道">社会渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_sh_qyqd" onclick="showTdByType(3,'社会渠道',this,'签约渠道');" href="#">签约渠道</a>
+
+
+
+
+
+
+
+                                        <a id="td_sh_zgqd" onclick="showTdByType(3,'社会渠道',this,'直供渠道');" href="#">直供渠道</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="社区渠道">社区渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_sq_ejfb" onclick="showTdByType(3,'社区渠道',this,'二级分部');" href="#">二级分部</a>
+
+
+
+
+
+
+
+                                        <a id="td_sq_shqd" onclick="showTdByType(3,'社区渠道',this,'社会渠道');" href="#">社会渠道</a>
+
+
+
+
+
+
+
+                                        <a id="td_sq_zyqd" onclick="showTdByType(3,'社区渠道',this,'自有渠道');" href="#">自有渠道</a>
+
+
+
+
+
+
+
+                                        <a id="td_sq_blxqd" onclick="showTdByType(3,'社区渠道',this,'便利型渠道');" href="#">便利型渠道</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="自有渠道">自有渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_zy_ydzyt" onclick="showTdByType(3,'自有渠道',this,'移动自营厅');" href="#">移动自营厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_zy_ydhzt" onclick="showTdByType(3,'自有渠道',this,'移动合作厅');" href="#">移动合作厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_zy_ydjmt" onclick="showTdByType(3,'自有渠道',this,'移动加盟厅');" href="#">移动加盟厅</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="直销渠道">直销渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_zx_qyzxb" onclick="showTdByType(3,'直销渠道',this,'区域直销部');" href="#">区域直销部</a>
+
+
+
+
+
+
+
+                                        <a id="td_zx_zxejfb" onclick="showTdByType(3,'直销渠道',this,'直销二级分部');" href="#">直销二级分部</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="电信渠道">电信渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_dx_dxyyt" onclick="showTdByType(3,'电信渠道',this,'电信营业厅');" href="#">电信营业厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_dx_dxhzt" onclick="showTdByType(3,'电信渠道',this,'电信合作厅');" href="#">电信合作厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_dx_dxqyqd" onclick="showTdByType(3,'电信渠道',this,'电信签约渠道');" href="#">电信签约渠道</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="联通渠道">联通渠道：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_lt_ltyyt" onclick="showTdByType(3,'联通渠道',this,'联通营业厅');" href="#">联通营业厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_lt_lthzt" onclick="showTdByType(3,'联通渠道',this,'联通合作厅');" href="#">联通合作厅</a>
+
+
+
+
+
+
+
+                                        <a id="td_lt_ltqyqd" onclick="showTdByType(3,'联通渠道',this,'联通签约渠道');" href="#">联通签约渠道</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="热点规划">热点规划：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="rd_qd_qdrd" onclick="showTdByType(3,'渠道热点',this);" href="#">渠道热点</a>
+
+
+
+
+
+
+
+                                        <a id="rd_rl_rlrd" onclick="showTdByType(3,'人流热点',this);" href="#">人流热点</a>
+
+
+
+
+
+
+
+                                        <a id="rd_rl_rspq" onclick="showRspq(3,'弱势片区',this);" href="#">弱势片区</a>
+
+
+
+
+
+
+
+                                        <a id="rd_qd_qdrd" onclick="showTdByType(3,'弱势渠道热点',this);" href="#">弱势渠道热点</a>
+
+
+
+
+
+
+
+                                        <a id="rd_rl_rlrd" onclick="showTdByType(3,'弱势人流热点',this);" href="#">弱势人流热点</a>
+
+
+
+
+
+
+
+                                        <a id="rd_rl_gyqrd" onclick="showTdByType(3,'工业区热点',this);" href="#">工业区热点</a>
+
+
+
+
+
+
+
+                                        <a id="rd_rl_zssg" onclick="showTdByType(3,'务工指示栅格',this);" href="#">务工指示栅格</a>
+
+
+
+
+
+                                        <input id="dwsg" style="width:80px">
+                                        <input value="定位栅格" type="button" onclick="showTdByType(3,'定位栅格',this)">&nbsp;
+                                        <input value="移除栅格" type="button" onclick="removeZssg()">
+
+
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="渠道规划">渠道规划：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="td_tdgh_xzbj" onclick="layer.msg('请从左边组织结构列表中进行操作！', {icon: 3});" href="#">新增布局</a>
+
+
+
+
+
+
+
+                                        <a id="td_tdgh_ghzs" onclick="toggleTDGH();" href="#">规划展示</a>
+
+
+
+
+
+
+
+                                        <a id="td_tdgh_xszb" onclick="troggleGhzb(this);" href="#">显示占比</a>
+
+
+
+
+
+
+
+                                        <a id="td_gh_ystfl" onclick="showTdByType(3,'友商厅分流',this);" href="#">友商厅分流</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="通道能力">通道能力：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="nl_sdb_yll" onclick="showSdb(0.35,'引流率片区',this);" href="#">引流率</a>
+
+
+
+
+
+
+
+                                        <a id="nl_sdb_ccl" onclick="showSdb(0.3,'促成率片区',this);" href="#">促成率</a>
+
+
+
+
+
+
+
+                                        <a id="nl_sdb_rhl" onclick="showSdb(0.15,'融合率片区',this);" href="#">融合率</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="2018-渠道规划">2018-渠道规划：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yytxzyh" onclick="QDGH.queryPoi(1,this);" href="#">营业厅选址优化</a>
+
+
+
+
+
+
+
+                                        <a id="jmtbj" onclick="QDGH.queryPoi(2,this);" href="#">加盟厅布局（社区布点）</a>
+
+
+
+
+
+
+
+                                        <a id="gh_qdgh" onclick="QDGH.queryPoi(3,this);" href="#">渠道规划(低份额攻坚)</a>
+
+
+
+
+
+
+
+                                        <a id="gh_yygh" onclick="QDGH.queryPoi(4,this);" href="#">友商分流布点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns yxms">
+                <i class=""></i>
+                <span>营销执行</span>
+                <em></em>
+                <div id="yxms" class="subMenu" style="display: none;">
+                    <div class="tl">营销执行</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="营销模式">营销模式：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yxzx_yxms_yxjlcx" title="营销记录-先出来时间选择框，不出来历史列表，只在地图上展示数据并添加点击事件" onclick="scene.showSceneListDialog(1);" href="#">营销记录查询</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_yxms_yxjlzxcx" title="营销执行查询，数据来源自mk表，不同于以往chnl当主表" onclick="showMarketMAndL(21);" href="#">营销执行查询mk</a>
+
+
+
+
+
+
+
+                                        <a id="yggz" onclick="$('#dlgMarketInfo').dialog('open');showMarketResultList('query');" href="#">营销效果跟踪</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_yxms_rwxp" onclick="showTaskMarket();" href="#">任务下派</a>
+
+
+
+
+
+
+
+                                        <a id="gj_zs_screen" onclick="sceneScreen();" href="#">场景筛选</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_yxms_curLocation" onclick="scene.toggleCurLocation(this,1);" href="#"
+                                           class="active">实时位置</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="新春营销">新春营销：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yxzx_xcyx_ljrlt" onclick="mrHeat.show(8,'',this);" href="#">日漫入热力图</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_xcyx_mrrdqy" onclick="showMrArea(1,this);" href="#">日漫入热点区域</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_xcyx_mrrlt" onclick="heat.show(8,'',this);" href="#">累计漫入热力图</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_xcyx_ljmrrd" onclick="showMrLjArea(2,this);" href="#">累计漫入热点区域</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_xcyx_yxcc" onclick="getYxccArea('1');" href="#">营销场次</a>
+
+
+
+
+
+
+
+                                        <a id="yxzx_xcyx_yxppd" onclick="showXcyyArea(this);" href="#">营销匹配度</a>
+
+
+
+
+
+
+
+                                        <a id="slqd_scds_mrfhb" onclick="showColorWin('mrfhb',this);" href="#">漫入放号比(%)</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="其他平台">其他平台：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="ptjl" onclick="getPtjl();" href="#">摆摊精灵</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="一网格一方案">一网格一方案：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="ywgyfa_fazd" onclick="mkt.add();" href="#">方案制定</a>
+
+
+
+
+
+
+
+                                        <a id="ywgyfa_fazs" onclick="mkt.show();" href="#">方案展示</a>
+
+
+
+
+
+
+
+                                        <a id="ywgyfa_zxjd" onclick="mkt.progress();" href="#">执行进度</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="轨迹展示">轨迹展示：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yx_sq_zx" onclick="showTdByType(3,'轨迹点',this);" href="#"
+                                           class="active">轨迹点</a>
+
+
+
+
+
+
+
+                                        <a id="yx_zs_lsgj" onclick="scene.showLocHistoryDialog(1);" href="#">历史轨迹</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns yzwf">
+                <i class=""></i>
+                <span>营装维服</span>
+                <em></em>
+                <div id="yzwf" class="subMenu" style="display: none;">
+                    <div class="tl">营装维服</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="营销效果">营销效果：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yz_yx_yxyw" onclick="layer.msg('功能开发中...');report.showYXYW(27101);" href="#">营销业务</a>
+
+
+
+
+
+
+
+                                        <a id="yz_yx_cdyx" onclick="layer.msg('功能开发中...');report.showEcharts(27102,this);" href="#">触点营销</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="装机管理">装机管理：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yz_zj_zylyl" onclick="layer.msg('功能开发中...');report.showEcharts(27201,this);" href="#">资源利用率</a>
+
+
+
+
+
+
+
+                                        <a id="yz_zj_xngl" onclick="layer.msg('功能开发中...');report.showEcharts(27202,this);" href="#">效能管理</a>
+
+
+
+
+
+
+
+                                        <a id="yz_zj_fgdfx" onclick="layer.msg('功能开发中...');report.showEcharts(27203,this);" href="#">覆盖地分析</a>
+
+
+
+
+
+
+
+                                        <a id="yz_zj_ssfb" onclick="layer.msg('功能开发中...');report.showEcharts(27204,this);" href="#">实时分布</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="品质维护">品质维护：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yz_pz_kddskd" onclick="layer.msg('功能开发中...');report.showEcharts(27301,this);" href="#">宽带电视卡顿</a>
+
+
+
+
+
+
+
+                                        <a id="yz_pz_tsbz" onclick="layer.msg('功能开发中...');report.showEcharts(27302,this);" href="#">投诉报障</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="智能服务">智能服务：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="yz_zn_fwzb" onclick="layer.msg('功能开发中...');report.showEcharts(27401,this);" href="#">服务指标</a>
+
+
+
+
+
+
+
+                                        <a id="yz_zn_tsgl" onclick="layer.msg('功能开发中...');report.showEcharts(27402,this);" href="#">投诉管理</a>
+
+
+
+
+
+
+
+                                        <a id="yz_zn_kfqfb" onclick="layer.msg('功能开发中...');report.showEcharts(27403,this);" href="#">宽服器分布</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <!-- 2018年2月13日10:50:17 系统工具菜单迁移到左边 -->
+
+
+            <a href="#" class="myBtns xtgj">
+                <i class="hide"></i>
+                <span class="hide">系统工具</span>
+                <em class="hide"></em>
+                <div id="xtgj" class="subMenu" style="display: none;">
+                    <div class="tl">系统工具</div>
+                    <div class="menuItems">
+                        <table cellpadding="0" cellspacing="0" style="width:100%; table-layout:fixed">
+
+                            <tbody>
+                                <tr>
+                                    <td class="stl" title="精确定位">精确定位：</td>
+                                    <td class="item">
+
+
+
+                                        <div id="locb">
+                                            经度:
+                                            <input id="locbLon" style="width:60px"> 纬度:
+                                            <input id="locbLat" style="width:60px">
+                                            <input value="百度" type="button" onclick="bLocation();"> 经度:
+                                            <input id="locgLon" style="width:60px"> 纬度:
+                                            <input id="locgLat" style="width:60px">
+                                            <input value="谷歌" type="button" onclick="gLocation();">
+                                        </div>
+
+
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="保存点">保存点：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="gj_sz_bcd" onclick="saveMarkers();" href="#">保存点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="保存线">保存线：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="gj_sz_bcx" onclick="saveArea();" href="#">保存线</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="隐藏点">隐藏点：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="gj_sz_ycd" onclick="removeAllMarkers();" href="#">隐藏点</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="stl" title="网格展示">网格展示：</td>
+                                    <td class="item">
+
+
+
+
+
+                                        <a id="gj_zs_map" onclick="troggleAreaInfoWin(this);" href="#">面板模式</a>
+
+
+
+
+
+
+
+                                        <a id="gj_zs_right" onclick="troggleAreaInfoWin(this);" href="#">图形模式</a>
+
+
+
+
+
+
+
+                                        <a id="gj_zs_both" onclick="troggleAreaInfoWin(this);" href="#">面板&amp;图形</a>
+
+
+
+
+
+
+
+                                        <a id="gj_zs_wgjlzs" title="网格经理" onclick="showGridManagerList();" href="#">网格经理</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="stl" title="资源展示">资源展示：</td>
+                                    <td class="item">
+                                        <a id="gj_poi_label" onclick="trogglePoiWin(this);" href="#">文字标签</a>
+
+                                        <a id="gj_poi_win" onclick="trogglePoiWin(this);" href="#">信息弹窗</a>
+
+
+
+
+
+
+
+                                        <a id="gj_poi_control" onclick="mouseControl.troggleControl(this);" href="#">功能控制</a>
+
+
+
+
+
+
+
+                                        <a id="gj_poi_ywyj" title="yss_地理网格分析_预警t3,根据不同的业务(单选)，再选择场景类型(多选)，在地图上展示场景，并且能展示画像" onclick="scene.showSceneWarn(1);" href="#">场景业务预警</a>
+
+
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
+        <div id="container"></div>
+
+        <div class="button-group">
+            <input type="button" class="button layui-btn" value="保存绘制" onClick="mapEvent.saveEditor();" />
+            <input type="button" class="button layui-btn" value="继续绘制" onClick="mapEvent.closeEditor();" />
+            <input type="button" class="button layui-btn" value="重新绘制" onClick="mapEvent.restEditor();" />
+        </div>
+        <div class="combox-top">
+            <select id="combox" class="easyui-combotree" style="width:200px;"
+                   ></select>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
+<script src="~/js/index.js"></script>
+<script src="~/lib/layui/layui.all.js"></script>
+<script src="~/lib/easyui/jquery.easyui.min.js"></script>
+<script>
+    //缩放地图看看！！！
+    mapEvent.initEditor();
+    $('#cc').layout();
+    $("#combox").combotree({
+        method:'get',
+        url: '/api/Group',
+        valueField: 'groupId',
+        textField: 'groupName'
+    });
+    testfn1();
+    function testfn1() {
+        $(".panel .layout-expand .layout-expand-west .panel-htop").mouseenter(function () {
+            $('#body').layout('expand', 'west');
+        });
+        $(".panel .layout-panel .layout-panel-west .layout-split-west").mouseleave(function () {
+            $('#body').layout('collapse', 'west');
+        });
+    }
+    layui.tree({
+        elem: '#demo' //传入元素选择器
+        , nodes: [{ //节点
+            name: '父节点1'
+            , children: [{
+                name: '子节点11'
+            }, {
+                name: '子节点12'
+            }]
+        }, {
+            name: '父节点2（可以点左侧箭头，也可以双击标题）'
+            , children: [{
+                name: '子节点21'
+                , children: [{
+                    name: '子节点211'
+                }]
+            }]
+        }]
+    });
+
+
+</script>

@@ -1,0 +1,15 @@
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Application.deps.json
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Application.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Application.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Common.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Dapper.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Common.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Dapper.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.csprojResolveAssemblyReference.cache
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.csproj.CoreCompileInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.AssemblyInfoInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.AssemblyInfo.cs
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Application.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Application\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.pdb

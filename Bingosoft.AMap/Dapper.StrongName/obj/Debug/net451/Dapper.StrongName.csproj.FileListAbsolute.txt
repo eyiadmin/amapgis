@@ -1,0 +1,7 @@
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\bin\Debug\net451\Dapper.StrongName.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\bin\Debug\net451\Dapper.StrongName.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.csproj.CoreCompileInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.AssemblyInfoInputs.cache
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.AssemblyInfo.cs
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.dll
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.pdb
