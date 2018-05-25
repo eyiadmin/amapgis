@@ -120,6 +120,8 @@
     <link rel="stylesheet" href="~/lib/easyui/themes/icon.css" />
     <link rel="stylesheet" href="~/lib/layui/css/layui.css" />
     <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/web.contextmenu.css"/>
+
 
     <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
 
@@ -153,8 +155,8 @@
 
 <body id="cc" class="easyui-layout">
 
-    <div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:10px;">
-        <ul id="demo"></ul>
+    <div data-options="region:'west',split:true,title:'组织'" style="width:150px;padding:10px;">
+        <input id="cbtree" class="easyui-combotree" data-options="url:'/api/Group',method:'get',multiple:false" style="width:100%">
     </div>
     <div data-options="region:'center'">
         <div class="btnGroup">
@@ -2014,11 +2016,14 @@
             <input type="button" class="button layui-btn" value="重新绘制" onClick="mapEvent.restEditor();" />
         </div>
         <div class="combox-top">
-            <select id="combox" class="easyui-combotree" style="width:200px;"
-                   ></select>
+            
         </div>
     </div>
-
+    <div id="save">
+        <div style="padding:50px;">区域名称：<input id="area_name" /></div>
+        <div style="padding:50px;">所属区域:<select /></div>
+        <div><input type="button" class=" layui-btn" value="存盘" onclick="mapEvent.closeLayui()" /></div>
+    </div>
 </body>
 
 
@@ -2026,16 +2031,16 @@
 <script src="~/js/index.js"></script>
 <script src="~/lib/layui/layui.all.js"></script>
 <script src="~/lib/easyui/jquery.easyui.min.js"></script>
+<script src="~/js/web.contextmenu.js"></script>
 <script>
     //缩放地图看看！！！
     mapEvent.initEditor();
     $('#cc').layout();
-    $("#combox").combotree({
-        method:'get',
-        url: '/api/Group',
-        valueField: 'groupId',
-        textField: 'groupName'
-    });
+    //$("#combox").combotree({
+    //    method:'get',
+    //    url: '/api/Group'
+      
+    //});
     testfn1();
     function testfn1() {
         $(".panel .layout-expand .layout-expand-west .panel-htop").mouseenter(function () {
@@ -2045,25 +2050,7 @@
             $('#body').layout('collapse', 'west');
         });
     }
-    layui.tree({
-        elem: '#demo' //传入元素选择器
-        , nodes: [{ //节点
-            name: '父节点1'
-            , children: [{
-                name: '子节点11'
-            }, {
-                name: '子节点12'
-            }]
-        }, {
-            name: '父节点2（可以点左侧箭头，也可以双击标题）'
-            , children: [{
-                name: '子节点21'
-                , children: [{
-                    name: '子节点211'
-                }]
-            }]
-        }]
-    });
-
+   
+    
 
 </script>

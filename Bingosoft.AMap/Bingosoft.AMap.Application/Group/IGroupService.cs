@@ -9,6 +9,8 @@ namespace Bingosoft.AMap.Application.Group
     {
         List<GroupOutputDto> getGroup();
 
-        List<ComboTreeOutputDto> getGroupTreeData();
+        string getGroupTreeData();
+
+        ComboTreeOutputDto getTreeData();
     }
 }

@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Bingosoft.AMap.Application.DrawAMap;
+using Bingosoft.AMap.Application.DrawAMap.Dto;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Bingosoft.AMap.Web.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+   // [Authorize]
     public class DrawAMapController : Controller
     {
         IDrawAMapService drawAMapService;
@@ -39,8 +40,16 @@ namespace Bingosoft.AMap.Web.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]AreaDrawInputDto value)
         {
+            var drawArea = value;
+            drawArea.DrawCreatorId = "1";
+            drawArea.DrawCreatorName = "oo9";
+            drawArea.AreaId = "asw";
+            drawArea.GroupId = 2;
+            drawArea.ParentGroupId = 1;
+            this.drawAMapService.saveDrawArea(drawArea);
+            return Ok();
         }
 
         // PUT api/values/5

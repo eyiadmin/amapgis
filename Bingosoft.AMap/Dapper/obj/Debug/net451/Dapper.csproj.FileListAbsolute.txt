@@ -5,4 +5,3 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfoInput
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.pdb
-D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.csprojResolveAssemblyReference.cache

@@ -5,3 +5,4 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.Strong
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\net451\Dapper.StrongName.csprojResolveAssemblyReference.cache

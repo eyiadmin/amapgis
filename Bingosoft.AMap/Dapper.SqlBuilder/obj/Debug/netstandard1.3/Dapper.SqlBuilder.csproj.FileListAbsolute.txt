@@ -3,7 +3,6 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\netstandard1.3\Dappe
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\netstandard1.3\Dapper.SqlBuilder.pdb
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\netstandard1.3\Dapper.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\bin\Debug\netstandard1.3\Dapper.pdb
-D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\netstandard1.3\Dapper.SqlBuilder.csprojResolveAssemblyReference.cache
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\netstandard1.3\Dapper.SqlBuilder.csproj.CoreCompileInputs.cache
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\netstandard1.3\Dapper.SqlBuilder.AssemblyInfoInputs.cache
 D:\worker\cd_map\Bingosoft.AMap\Dapper.SqlBuilder\obj\Debug\netstandard1.3\Dapper.SqlBuilder.AssemblyInfo.cs

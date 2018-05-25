@@ -6,3 +6,4 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\netstandard2.0\Dappe
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\netstandard2.0\Dapper.StrongName.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\netstandard2.0\Dapper.StrongName.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\netstandard2.0\Dapper.StrongName.pdb
+D:\worker\cd_map\Bingosoft.AMap\Dapper.StrongName\obj\Debug\netstandard2.0\Dapper.StrongName.csprojResolveAssemblyReference.cache

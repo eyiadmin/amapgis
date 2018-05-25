@@ -18,3 +18,5 @@ D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\obj\Debug\netcoreapp2.0
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\obj\Debug\netcoreapp2.0\Bingosoft.AMap.XUnitTest.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\obj\Debug\netcoreapp2.0\Bingosoft.AMap.XUnitTest.dll
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\obj\Debug\netcoreapp2.0\Bingosoft.AMap.XUnitTest.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.XUnitTest\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.pdb

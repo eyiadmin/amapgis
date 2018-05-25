@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Bingosoft.AMap.Core\Bingosoft.AMap.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="JsonParams\" />
+  </ItemGroup>
+
 </Project>

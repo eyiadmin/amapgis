@@ -10,7 +10,7 @@ namespace Bingosoft.AMap.XUnitTest
         public void Test1()
         {
             var homeController = new GroupService();
-            homeController.getGroup();
+            homeController.getTreeData();
         }
     }
 }

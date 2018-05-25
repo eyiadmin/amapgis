@@ -15,3 +15,5 @@ D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\bin\Debug\netcoreapp2.0\Dapp
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Test.csprojResolveAssemblyReference.cache
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Test.dll
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Test.pdb
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.dll
+D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Test\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.pdb

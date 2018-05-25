@@ -26,18 +26,43 @@ namespace Bingosoft.AMap.Application.DrawAMap
 
         public void saveDrawArea(AreaDrawInputDto inputDto)
         {
-            string sql= "insert into area_draw (area_id,area_name,area_lnglat,draw_creator_id,draw_creator_name,create_time,update_time,group_id,parent_group_id) values(" +
+            string sql = "select count(1) from area_draw where area_id=@area_id";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("area_id", inputDto.AreaId);
+            int rows = MySqlConnection.ExecuteScalar<int>(sql, dynamicParameters);
+            if (rows >= 1)
+            {
+                updateDrawArea(inputDto);
+            }
+            else
+            {
+                insertDrawArea(inputDto);
+            }
+
+        }
+
+        private void insertDrawArea(AreaDrawInputDto inputDto)
+        {
+            string sql = "insert into area_draw (area_id,area_name,area_lnglat,draw_creator_id,draw_creator_name,create_time,update_time,group_id,parent_group_id) values(" +
                 "@area_id,@area_name,@area_lnglat,@draw_creator_id,@draw_creator_name,now(),now(),@group_id,@parent_group_id)";
             DynamicParameters dynamicParameters = new DynamicParameters();
-            dynamicParameters.Add("area_id",inputDto.AreaId);
+            dynamicParameters.Add("area_id", inputDto.AreaId);
             dynamicParameters.Add("area_name", inputDto.AreaName);
             dynamicParameters.Add("area_lnglat", inputDto.AreaLngLat);
             dynamicParameters.Add("draw_creator_id", inputDto.DrawCreatorId);
             dynamicParameters.Add("draw_creator_name", inputDto.DrawCreatorName);
             dynamicParameters.Add("group_id", inputDto.GroupId);
             dynamicParameters.Add("parent_group_id", inputDto.ParentGroupId);
-            MySqlConnection.ExecuteScalar(sql,dynamicParameters);
-            
+            MySqlConnection.Execute(sql, dynamicParameters);
+        }
+        private void updateDrawArea(AreaDrawInputDto inputDto)
+        {
+            string sql = " update area_draw area_name=@area_name,area_lnglat=@area_lnglat,update_time=now() where area_id=@area_id";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("area_name", inputDto.AreaName);
+            dynamicParameters.Add("area_lnglat", inputDto.AreaLngLat);
+            dynamicParameters.Add("area_id", inputDto.AreaId);
+            MySqlConnection.Execute(sql, dynamicParameters);
         }
 
         public void saveDrawArea()
