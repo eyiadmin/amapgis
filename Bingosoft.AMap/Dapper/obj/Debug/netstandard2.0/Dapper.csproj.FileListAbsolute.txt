@@ -7,3 +7,12 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyI
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.pdb
+E:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.deps.json
+E:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.dll
+E:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.pdb
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.csprojAssemblyReference.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.csproj.CoreCompileInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfoInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfo.cs
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.dll
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.pdb

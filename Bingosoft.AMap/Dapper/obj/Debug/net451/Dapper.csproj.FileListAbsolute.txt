@@ -5,3 +5,11 @@ D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfoInput
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfo.cs
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.dll
 D:\worker\cd_map\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.pdb
+E:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\net451\Dapper.dll
+E:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\net451\Dapper.pdb
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.csprojAssemblyReference.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.csproj.CoreCompileInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfoInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfo.cs
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.dll
+E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.pdb

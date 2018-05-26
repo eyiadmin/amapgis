@@ -9,3 +9,15 @@ D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bi
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Dapper.dll
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Dapper.pdb
 D:\worker\cd_map\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.csprojResolveAssemblyReference.cache
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Common.deps.json
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Common.dll
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Common.pdb
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Dapper.dll
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Dapper.pdb
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.csprojAssemblyReference.cache
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.csproj.CoreCompileInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.AssemblyInfoInputs.cache
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.AssemblyInfo.cs
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.csproj.CopyComplete
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.dll
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.pdb

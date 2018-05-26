@@ -74,5 +74,14 @@ namespace Bingosoft.AMap.Application.DrawAMap
         {
             return "say";
         }
+
+        public List<AreaDrawOutputDto> GetAreaDrawOutputDtos(int groupId)
+        {
+            string sql = " select from  area_draw group_id=@group_id";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("group_id", groupId);
+
+            return MySqlConnection.Query<AreaDrawOutputDto>(sql, dynamicParameters).AsList();
+        }
     }
 }

@@ -2011,7 +2011,7 @@
         <div id="container"></div>
 
         <div class="button-group">
-            <input type="button" class="button layui-btn" value="保存绘制" onClick="mapEvent.saveEditor();" />
+            <input type="button" class="button layui-btn" value="保存绘制" onClick="mapControl.closeEditPolygon();" />
             <input type="button" class="button layui-btn" value="继续绘制" onClick="mapEvent.closeEditor();" />
             <input type="button" class="button layui-btn" value="重新绘制" onClick="mapEvent.restEditor();" />
         </div>
@@ -2028,13 +2028,15 @@
 
 
 </html>
+<script src="~/js/deepcopy.min.js"></script>
 <script src="~/js/index.js"></script>
 <script src="~/lib/layui/layui.all.js"></script>
 <script src="~/lib/easyui/jquery.easyui.min.js"></script>
 <script src="~/js/web.contextmenu.js"></script>
 <script>
+    mapControl.init();
     //缩放地图看看！！！
-    mapEvent.initEditor();
+   // mapEvent.initEditor();
     $('#cc').layout();
     //$("#combox").combotree({
     //    method:'get',
