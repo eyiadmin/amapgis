@@ -156,7 +156,7 @@
 <body id="cc" class="easyui-layout">
 
     <div data-options="region:'west',split:true,title:'组织'" style="width:150px;padding:10px;">
-        <input id="cbtree" class="easyui-combotree" data-options="url:'/api/Group',method:'get',multiple:false" style="width:100%">
+        <input id="cbtree"  style="width:100%">
     </div>
     <div data-options="region:'center'">
         <div class="btnGroup">
@@ -2011,7 +2011,7 @@
         <div id="container"></div>
 
         <div class="button-group">
-            <input type="button" class="button layui-btn" value="保存绘制" onClick="mapControl.closeEditPolygon();" />
+            <input type="button" class="button layui-btn" value="保存绘制" onClick="mapControl.savePolygon();" />
             <input type="button" class="button layui-btn" value="继续绘制" onClick="mapEvent.closeEditor();" />
             <input type="button" class="button layui-btn" value="重新绘制" onClick="mapEvent.restEditor();" />
         </div>
@@ -2053,6 +2053,14 @@
         });
     }
    
-    
+    $('#cbtree').combotree({
+        url: '/api/Group', method: 'get', multiple: false, 
+        onSelect: function (node) {
+            mapControl.CbxOnSelect(node.id);
+        }
+    })
+    //function onSelect(node) { 
 
+    //    alert('a');
+    //}
 </script>

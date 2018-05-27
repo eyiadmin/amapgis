@@ -1,3 +1,5 @@
+
+
 var mapEvent = (function () {
     var mapEditor = {};
 
@@ -374,7 +376,14 @@ var editor = {
 
 
 var mapControl = {
+    CbxOnSelect: function (groupId) {
+        $.dataService.getPolygon(groupId, function () {
 
+        }, function () {
+
+        });
+    }
+    ,
     init: function () {
         editor.beginPoints = [];
         editor.beginMarks = [];
@@ -387,34 +396,67 @@ var mapControl = {
         //mapControl.createPolygon(arr);
     },
     savePolygon() {
-        var lnglat = JSON.stringify(this.editor.resPolygon), areaName = $("#area_name").val();
-        var data = JSON.stringify({ AreaId: GUID.newGuid(), AreaName: areaName, AreaLngLat: lnglat });
+
         var p = parent, that = this;
 
-        $.dataService.postPolygon(data, function (data) {
-            console.log(data);
-            layer.alert('保存成功', {
-                icon: 1,
-                title: "提示"
-            });
-            p.layer.close(that.editor.layOpen);
-        }, function (data) {
-            if (data.status === 200) {
+        var $cbtree = $('#cbtree').combotree('tree');	// get the tree object
+        var n = $cbtree.tree('getSelected');		// get selected node
+        var groupId = $("#cbtree").combotree("getValue")
+        if (groupId) {
+
+            var param = [];
+            for (var index = 0, endIndex = editor.polygonArr.length - 1; index <= endIndex; index++) {
+                param.push({ AreaId: GUID.newGuid(), AreaLngLat: editor.polygonArr[index].getPath(), groupId: groupId });
+            }
+            //var lnglat = JSON.stringify(this.editor.resPolygon), areaName = $("#area_name").val();
+            //var data = JSON.stringify({ AreaId: GUID.newGuid(), AreaName: areaName, AreaLngLat: lnglat, groupId: groupId });
+            //var dataParams = { polygon: JSON.stringify(param) };
+            var dataParams =  JSON.stringify(param) ;
+            console.log(dataParams);
+            $.dataService.postPolygon(dataParams, function (data) {
                 console.log(data);
                 layer.alert('保存成功', {
                     icon: 1,
                     title: "提示"
                 });
                 p.layer.close(that.editor.layOpen);
-            }
-            else {
-                // console.log(err);
-                layer.alert('存盘失败', {
-                    icon: 5,
-                    title: "提示"
-                });
-            }
-        });
+            }, function (data) {
+                if (data.status === 200) {
+                    console.log(data);
+                    layer.alert('保存成功', {
+                        icon: 1,
+                        title: "提示"
+                    });
+                    p.layer.close(that.editor.layOpen);
+                }
+                else {
+                    // console.log(err);
+                    layer.alert('存盘失败', {
+                        icon: 5,
+                        title: "提示"
+                    });
+                }
+            });
+
+            ////在这里面输入任何合法的js语句
+            //this.editor.layOpen = layer.open({
+            //    type: 1 //Page层类型
+            //    , area: ['500px', '300px']
+            //    , title: '保存绘图'
+            //    , shade: 0.6 //遮罩透明度
+            //    , maxmin: true //允许全屏最小化
+            //    , anim: 1 //0-6的动画形式，-1不开启
+            //    , content: $("#save")
+            //});
+        }
+
+        else
+            layer.alert('你还未选择所属层级', {
+                icon: 5,
+                title: "提示"
+            });
+
+
 
         console.log(this.editor.resPolygon);
         this.editor.resPolygon.length = 0;
@@ -448,7 +490,7 @@ var mapControl = {
             editor.currentPolygonEditor = editor.polygonEditorArr[this.index];
             editor.currentPolygonEditor.open();
         });
-
+        editor.polygonArr.push(polygon);
         return polygon;
     },
     mapOnClick: function (e) {
