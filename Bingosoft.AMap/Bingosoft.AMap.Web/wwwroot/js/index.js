@@ -339,6 +339,17 @@ $.dataService = {
             success: successFunc,
             error: errorFunc
         });
+    },
+    delPolygon: function (id, successFunc, errorFunc) {
+        $.ajax({
+            type: 'delete',
+            url: '/api/DrawAMap/' + id,//发送请求  
+            headers: { "Authorization": "Bearer " + localStorage.getItem("token") },
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: successFunc,
+            error: errorFunc
+        });
     }
 }
 
@@ -366,20 +377,20 @@ contextmenu.addItem("删除", function () {
     //map.zoomIn();
     mapControl.deletePolygon();
 }, 0);
-contextmenu.addItem("缩小", function () {
-    map.zoomOut();
-}, 1);
-contextmenu.addItem("添加点标记", function () {
-    var marker = new AMap.Marker({
-        map: map,
-        position: pos
-    });
-}, 2);
-// 监听鼠标右击事件
-map.on("rightclick", function (e) {
-    contextmenu.open(map, e.lnglat);
-    pos = e.lnglat;
-});
+//contextmenu.addItem("缩小", function () {
+//    map.zoomOut();
+//}, 1);
+//contextmenu.addItem("添加点标记", function () {
+//    var marker = new AMap.Marker({
+//        map: map,
+//        position: pos
+//    });
+//}, 2);
+//// 监听鼠标右击事件
+//map.on("rightclick", function (e) {
+//    contextmenu.open(map, e.lnglat);
+//    pos = e.lnglat;
+//});
 
 var editor = {
     beginNum: 0,
@@ -416,7 +427,7 @@ var mapControl = {
                 for (var arrIndex = 0, endArrIndex = area.length - 1; arrIndex <= endArrIndex; arrIndex++) {
                     pyArr.push(new AMap.LngLat(area[arrIndex].lng, area[arrIndex].lat));
                 }
-                var polygon = mapControl.createPolygon(pyArr);
+                var polygon = mapControl.createPolygon(pyArr, data[index].areaId);
                 editor.currentPolygonEditor = mapControl.createEditor(polygon);
 
             }
@@ -510,7 +521,7 @@ var mapControl = {
                     lngLat.push({ lng: polygons[polygonIndex].lng, lat: polygons[polygonIndex].lat });
                 }
 
-                param.push({ AreaId: GUID.newGuid(), AreaLngLat: JSON.stringify(lngLat), groupId: groupId, parentGroupId: editor.parentId, AreaName: areaName });
+                param.push({ AreaId: polygons.pyId, AreaLngLat: JSON.stringify(lngLat), groupId: groupId, parentGroupId: editor.parentId, AreaName: areaName });
             }
             //var lnglat = JSON.stringify(this.editor.resPolygon), areaName = $("#area_name").val();
             //var data = JSON.stringify({ AreaId: GUID.newGuid(), AreaName: areaName, AreaLngLat: lnglat, groupId: groupId });
@@ -580,34 +591,67 @@ var mapControl = {
         if (editor.currentPolygon) {
             layer.confirm('你是否要删除当前对象', {
                 btn: ['确定', '取消'] //按钮
-            }, function () {
-                var index = editor.currentPolygon.currentIndex;
+            }, function (index) {
+                var polygonIndex = editor.currentPolygon.index, pyId = editor.currentPolygon.pyId;
+                $.dataService.delPolygon(pyId, function (data) {
+                    layui.msg("删除成功");
+                    editor.polygonArr.splice(polygonIndex, 1);
+                    var curEditor = editor.polygonEditorArr[polygonIndex];
+                    curEditor.close();
+                    editor.polygonEditorArr.splice(polygonIndex, 1);
+                    //map.remove(editor.polygonEditorArr[index]);
+                    map.remove(editor.currentPolygon);
+                    layer.close(index);
+                    editor.currentPolygon = null;
+                }, function (data) {
+
+                    if (data.status === 200) {
+                      
+                        editor.polygonArr.splice(polygonIndex, 1);
+                        var curEditor = editor.polygonEditorArr[polygonIndex];
+                        curEditor.close();
+                        editor.polygonEditorArr.splice(polygonIndex, 1);
+                        //map.remove(editor.polygonEditorArr[index]);
+                        map.remove(editor.currentPolygon);
+                        layer.close(index);
+                        editor.currentPolygon = null;
+                        console.log(data);
+                        layer.alert('删除成功', {
+                            icon: 1,
+                            title: "提示"
+                        });
+                        
+                    }
+                    else {
+                        // console.log(err);
+                        layer.alert('删除失败', {
+                            icon: 5,
+                            title: "提示"
+                        });
+                    }
+                   
+                });
                 //editor.polygonEditorArr[index].close();
-                editor.polygonArr.splice(index, 1);
-                editor.polygonEditorArr.splice(index, 1);
-                //map.remove(editor.polygonEditorArr[index]);
-                map.remove(editor.currentPolygon);
-                
-                editor.currentPolygon = null;
+
             }, function () {
                 //layer.msg('也可以这样', {
                 //    time: 20000, //20s后自动关闭
                 //    btn: ['明白了', '知道了']
                 //});
             });
-            
+
         } else {
             layer.alert('未选中删除对象', {
                 icon: 5,
                 title: "提示"
             });
         }
-        
+
     }
     ,
     //上面用到的几个函数
     //创建一个多边形对象
-    createPolygon: function (arr) {
+    createPolygon: function (arr, id) {
         var polygon = new AMap.Polygon({
             map: map,
             path: arr,
@@ -618,6 +662,7 @@ var mapControl = {
             fillOpacity: 0.35
         });
         polygon.index = editor.polygonEditorArr.length;
+        polygon.pyId = id;
         AMap.event.addListener(polygon, 'rightclick', function (e) {
             contextmenu.open(map, e.lnglat);
             editor.currentPolygonEditor.close();
@@ -648,7 +693,7 @@ var mapControl = {
             //editor.currentIndex++;
             console.log(editor.beginPoints);
             AMap.event.removeListener(editor.clickListener);
-            var polygon = mapControl.createPolygon(editor.beginPoints);
+            var polygon = mapControl.createPolygon(editor.beginPoints, GUID.newGuid());
             editor.currentPolygonEditor = mapControl.createEditor(polygon);
             mapControl.clearMarks();
         }

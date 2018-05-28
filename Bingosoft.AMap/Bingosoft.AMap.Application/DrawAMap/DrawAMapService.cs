@@ -26,19 +26,19 @@ namespace Bingosoft.AMap.Application.DrawAMap
 
         public void saveDrawArea(AreaDrawInputDto inputDto)
         {
-            //string sql = "select count(1) from area_draw where group_id=@group_id";
-            //DynamicParameters dynamicParameters = new DynamicParameters();
-            //dynamicParameters.Add("group_id", inputDto.GroupId);
-            //int rows = MySqlConnection.ExecuteScalar<int>(sql, dynamicParameters);
-            //if (rows >= 1)
-            //{
-            //    // updateDrawArea(inputDto);
-            //    removeAreaDraw(inputDto.GroupId);
-            //}
-            //else
-            //{
-            insertDrawArea(inputDto);
-            //}
+            string sql = "select count(1) from area_draw where area_id=@area_id";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("area_id", inputDto.AreaId);
+            int rows = MySqlConnection.ExecuteScalar<int>(sql, dynamicParameters);
+            if (rows >= 1)
+            {
+                // updateDrawArea(inputDto);
+                //removeAreaDraw(inputDto.GroupId);
+            }
+            else
+            {
+                insertDrawArea(inputDto);
+            }
 
         }
 
@@ -99,6 +99,15 @@ namespace Bingosoft.AMap.Application.DrawAMap
             string sql = " update  area_draw set is_delete=1,update_time=now() where group_id=@group_id and  is_delete=0";
             DynamicParameters dynamicParameters = new DynamicParameters();
             dynamicParameters.Add("group_id", groupId);
+
+            MySqlConnection.Execute(sql, dynamicParameters);
+        }
+
+        public void removeAreaDrawById(string areaId)
+        {
+            string sql = " update  area_draw set is_delete=1,update_time=now() where area_id=@areaId and  is_delete=0";
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("areaId", areaId);
 
             MySqlConnection.Execute(sql, dynamicParameters);
         }

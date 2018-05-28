@@ -34,3 +34,5 @@ D:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\B
 D:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\obj\Debug\netcoreapp2.0\Bingosoft.AMap.Common.pdb
 D:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.dll
 D:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.pdb
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.dll
+E:\worker\amapgis\Bingosoft.AMap\Bingosoft.AMap.Common\bin\Debug\netcoreapp2.0\Bingosoft.AMap.Core.pdb

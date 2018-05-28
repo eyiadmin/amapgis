@@ -74,10 +74,10 @@ namespace Bingosoft.AMap.Web.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] List<AreaDrawInputDto> values)
         {
-            if (values.Count >= 1)
-            {
-                this.drawAMapService.removeAreaDraw(values[0].GroupId);
-            }
+            //if (values.Count >= 1)
+            //{
+            //    this.drawAMapService.removeAreaDraw(values[0].GroupId);
+            //}
             var name = this.User.Identity.Name;
             var loginNo = this.User.Claims.FirstOrDefault(o => o.Type == ClaimTypesExt.LoginNo)?.Value;
             //List<AreaDrawInputDto> values = new List<AreaDrawInputDto>();
@@ -102,8 +102,9 @@ namespace Bingosoft.AMap.Web.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(string id)
         {
+            this.drawAMapService.removeAreaDrawById(id);
         }
     }
 }
