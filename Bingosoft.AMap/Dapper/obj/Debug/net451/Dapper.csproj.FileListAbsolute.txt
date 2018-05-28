@@ -13,3 +13,10 @@ E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfoInpu
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfo.cs
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.dll
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.pdb
+D:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\net451\Dapper.dll
+D:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\net451\Dapper.pdb
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.csproj.CoreCompileInputs.cache
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfoInputs.cache
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.AssemblyInfo.cs
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.dll
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\net451\Dapper.pdb

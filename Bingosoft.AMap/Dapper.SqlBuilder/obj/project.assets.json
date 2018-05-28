@@ -4368,7 +4368,7 @@
       ]
     },
     "System.Security.Principal.Windows/4.4.0": {
-      "sha512": "pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==",
+      "sha512": "Hgw/5g0Df6OpF/IJ52O7Z+LqbwI046+bQBlqTccTyNtlK2zfQz0a4JwNyrfomVNcsi7Ag94d0fMHM2uWXOPgNQ==",
       "type": "package",
       "path": "system.security.principal.windows/4.4.0",
       "files": [
@@ -5164,24 +5164,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\Dapper.SqlBuilder.csproj",
+      "projectUniqueName": "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\Dapper.SqlBuilder.csproj",
       "projectName": "Dapper.SqlBuilder",
-      "projectPath": "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\Dapper.SqlBuilder.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\obj\\",
+      "projectPath": "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\Dapper.SqlBuilder.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper.SqlBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5190,20 +5193,22 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\Administrator\\.dotnet\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.cnblogs.com/v3/index.json": {}
       },
       "frameworks": {
-        "net451": {
+        "netstandard1.3": {
           "projectReferences": {
-            "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj": {
-              "projectPath": "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj"
+            "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj": {
+              "projectPath": "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj"
             }
           }
         },
-        "netstandard1.3": {
+        "net451": {
           "projectReferences": {
-            "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj": {
-              "projectPath": "E:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj"
+            "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj": {
+              "projectPath": "D:\\worker\\amapgis\\Bingosoft.AMap\\Dapper\\Dapper.csproj"
             }
           }
         }
@@ -5215,20 +5220,20 @@
       }
     },
     "frameworks": {
-      "net451": {},
       "netstandard1.3": {
         "dependencies": {
-          "Microsoft.CSharp": {
-            "target": "Package",
-            "version": "[4.3.0, )"
-          },
           "NETStandard.Library": {
             "target": "Package",
-            "version": "[1.6.1, )",
+            "version": "1.6.1",
             "autoReferenced": true
+          },
+          "Microsoft.CSharp": {
+            "target": "Package",
+            "version": "4.3.0"
           }
         }
-      }
+      },
+      "net451": {}
     }
   }
 }

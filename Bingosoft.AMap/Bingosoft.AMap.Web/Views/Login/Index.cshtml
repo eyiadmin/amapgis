@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/login.js"></script>
+
+<script type="text/javascript">
+    var uid = "@ViewBag.Uid";
+    loginController.login();
+</script>

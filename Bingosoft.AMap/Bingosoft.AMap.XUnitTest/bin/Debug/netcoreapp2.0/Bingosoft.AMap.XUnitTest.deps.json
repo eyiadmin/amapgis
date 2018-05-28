@@ -1161,6 +1161,7 @@
       },
       "Bingosoft.AMap.Common/1.0.0": {
         "dependencies": {
+          "Bingosoft.AMap.Core": "1.0.0",
           "Dapper": "1.0.0",
           "MySql.Data": "8.0.11"
         },

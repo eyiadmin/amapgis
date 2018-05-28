@@ -47,7 +47,7 @@ namespace Bingosoft.AMap.Application.Group
             //var group = mySQLHelper.FindOne<GroupOutputDto>(mysql, sql, null);
             var group = MySqlConnection.Query<GroupOutputDto>(sql);
             MySqlConnection.Close();
-            var treeDataItem= treeData(group.AsList(),2,"成都");
+            var treeDataItem = treeData(group.AsList(), 2, "成都");
             // List<ComboTreeOutputDto> treeDatas = new List<ComboTreeOutputDto>();
             //treeDatas.Add(treeDataItem);
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(treeDataItem);
@@ -67,9 +67,24 @@ namespace Bingosoft.AMap.Application.Group
             return treeDatas;
         }
 
+        public ComboTreeOutputDto getTreeData(int groupId, string groupName)
+        {
+            string sql = "select group_id groupId,group_name groupName,parent_group_id parentId from GROUP_INFO where group_id=@group_id" +
+"union ALL" +
+"select group_id groupId,group_name groupName, parent_group_id parentId from GROUP_INFO where parent_group_id = @group_id";
+            //var group = mySQLHelper.FindOne<GroupOutputDto>(mysql, sql, null);
+            var group = MySqlConnection.Query<GroupOutputDto>(sql);
+            //MySqlConnection.Close();
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("group_id", groupId);
+            var treeDatas = treeData(group.AsList(), groupId, groupName);
+            dictionary.Clear();
+            return treeDatas;
+        }
+
         Dictionary<int, string> dictionary = new Dictionary<int, string>();
 
-        public ComboTreeOutputDto treeData(List<GroupOutputDto> groupList,int parentId,string parnetName)
+        public ComboTreeOutputDto treeData(List<GroupOutputDto> groupList, int parentId, string parnetName)
         {
             if (groupList != null)
             {
@@ -100,7 +115,7 @@ namespace Bingosoft.AMap.Application.Group
                     }
                     dictionary.Add(parentId, parnetName);
                     return comboTree;
-                } 
+                }
             }
             return null;
         }

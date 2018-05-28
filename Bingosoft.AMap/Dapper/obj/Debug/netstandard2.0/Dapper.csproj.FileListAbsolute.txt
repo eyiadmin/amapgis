@@ -16,3 +16,12 @@ E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.Assembly
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfo.cs
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.dll
 E:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.pdb
+D:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.deps.json
+D:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.dll
+D:\worker\amapgis\Bingosoft.AMap\Dapper\bin\Debug\netstandard2.0\Dapper.pdb
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.csprojResolveAssemblyReference.cache
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.csproj.CoreCompileInputs.cache
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfoInputs.cache
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.AssemblyInfo.cs
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.dll
+D:\worker\amapgis\Bingosoft.AMap\Dapper\obj\Debug\netstandard2.0\Dapper.pdb

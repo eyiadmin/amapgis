@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Authorization;
 using Bingosoft.AMap.Application.DrawAMap;
 using Bingosoft.AMap.Application.DrawAMap.Dto;
 using Newtonsoft.Json.Linq;
+using Bingosoft.AMap.Common;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Bingosoft.AMap.Web.Controllers
 {
     [Route("api/[controller]")]
-    // [Authorize]
+    //[Authorize]
     public class DrawAMapController : Controller
     {
         IDrawAMapService drawAMapService;
@@ -34,10 +35,27 @@ namespace Bingosoft.AMap.Web.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var areas = this.drawAMapService.GetAreaDrawOutputDtos(id);
+            return Ok(areas);
         }
+
+        [Route("area/{id}/area")]
+        [HttpGet]
+        public IActionResult GetChildren(int id)
+        {
+            var areas = this.drawAMapService.GetChilrenAreaDrawOutputDtos(id);
+            return Ok(areas);
+        }
+
+        //[Route("/[action]")]
+        //[HttpGet("{id}")]
+        //public IActionResult GetChildren(int id)
+        //{
+        //    var areas = this.drawAMapService.GetChilrenAreaDrawOutputDtos(id);
+        //    return Ok(areas);
+        //}
 
         // POST api/values
         //[HttpPost]
@@ -54,17 +72,22 @@ namespace Bingosoft.AMap.Web.Controllers
         //}
 
         [HttpPost]
-        public IActionResult Post([FromBody] JObject valuess)
+        public IActionResult Post([FromBody] List<AreaDrawInputDto> values)
         {
-            List<AreaDrawInputDto> values = new List<AreaDrawInputDto>();
+            if (values.Count >= 1)
+            {
+                this.drawAMapService.removeAreaDraw(values[0].GroupId);
+            }
+            var name = this.User.Identity.Name;
+            var loginNo = this.User.Claims.FirstOrDefault(o => o.Type == ClaimTypesExt.LoginNo)?.Value;
+            //List<AreaDrawInputDto> values = new List<AreaDrawInputDto>();
             foreach (var value in values)
             {
                 var drawArea = value;
-                drawArea.DrawCreatorId = "1";
-                drawArea.DrawCreatorName = "oo9";
-                drawArea.AreaId = "asw";
-                drawArea.GroupId = 2;
-                drawArea.ParentGroupId = 1;
+                drawArea.DrawCreatorId = loginNo ?? "";
+                drawArea.DrawCreatorName = name ?? "";
+
+                drawArea.ParentGroupId = 2;
                 this.drawAMapService.saveDrawArea(drawArea);
             }
             return Ok();

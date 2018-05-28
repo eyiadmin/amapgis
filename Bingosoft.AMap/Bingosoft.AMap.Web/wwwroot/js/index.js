@@ -323,6 +323,7 @@ $.dataService = {
             data: datas,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
+            headers: { "Authorization": "Bearer " + localStorage.getItem("token") },
             success: successFunc,
             error: errorFunc
         });
@@ -330,8 +331,9 @@ $.dataService = {
     getPolygon: function (groupId, successFunc, errorFunc) {
         $.ajax({
             type: 'get',
-            url: '/api/DrawAMap',//发送请求  
+            url: '/api/DrawAMap/' + groupId,//发送请求  
             data: { groupId: groupId },
+            headers: { "Authorization": "Bearer " + localStorage.getItem("token") },
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: successFunc,
@@ -357,6 +359,28 @@ map.plugin(["AMap.MapType"], function () {
     map.addControl(type);
 });
 
+var contextmenu = new AMap.ContextMenu();
+var pos = [];
+// 添加右键菜单内容项
+contextmenu.addItem("删除", function () {
+    //map.zoomIn();
+    mapControl.deletePolygon();
+}, 0);
+contextmenu.addItem("缩小", function () {
+    map.zoomOut();
+}, 1);
+contextmenu.addItem("添加点标记", function () {
+    var marker = new AMap.Marker({
+        map: map,
+        position: pos
+    });
+}, 2);
+// 监听鼠标右击事件
+map.on("rightclick", function (e) {
+    contextmenu.open(map, e.lnglat);
+    pos = e.lnglat;
+});
+
 var editor = {
     beginNum: 0,
     clickListener: null,
@@ -371,19 +395,73 @@ var editor = {
     currentIndex: -1,
     polygonEditorArr: [],
     polygonArr: [],
-    pathArr: []
+    pathArr: [],
+    parentId: 0,
+    groupId: 0,
+    saveForm: $("#save")
 };
 
 
 var mapControl = {
     CbxOnSelect: function (groupId) {
-        $.dataService.getPolygon(groupId, function () {
+        editor.groupId = groupId;
+        $.dataService.getPolygon(groupId, function (data) {
+            //选择时初始化;
+            map.clearMap();
+            mapControl.init();
+            for (var index = 0, endIndex = data.length - 1; index <= endIndex; index++) {
+                var area = JSON.parse(data[index].areaLngLat);
+                console.log(area);
+                var pyArr = [];
+                for (var arrIndex = 0, endArrIndex = area.length - 1; arrIndex <= endArrIndex; arrIndex++) {
+                    pyArr.push(new AMap.LngLat(area[arrIndex].lng, area[arrIndex].lat));
+                }
+                var polygon = mapControl.createPolygon(pyArr);
+                editor.currentPolygonEditor = mapControl.createEditor(polygon);
 
-        }, function () {
+            }
 
+
+            console.log("success");
+            console.log(data)
+        }, function (data) {
+            console.log("err");
+            console.log(data);
         });
+    }, showChildren: function () {
+        $.dataService.getPolygon("area/" + editor.groupId + "/area", function (data) {
+            //选择时初始化;
+
+            for (var index = 0, endIndex = data.length - 1; index <= endIndex; index++) {
+                var area = JSON.parse(data[index].areaLngLat);
+                console.log(area);
+                var pyArr = [];
+                for (var arrIndex = 0, endArrIndex = area.length - 1; arrIndex <= endArrIndex; arrIndex++) {
+                    pyArr.push(new AMap.LngLat(area[arrIndex].lng, area[arrIndex].lat));
+                }
+                var polygon = mapControl.createNoArrPolygon(pyArr);
+
+
+            }
+
+
+            console.log("success");
+            console.log(data)
+        }, function (data) {
+            console.log("err");
+            console.log(data);
+        });
+
+    }, selectItem: function (node) {
+        var $cbtree = $('#cbtree').combotree('tree');	// get the tree object
+        var n = $cbtree.tree('getSelected');		// get selected node
+        var parent = $cbtree.tree('getParent', node.target);
+        if (parent)
+            editor.parentId = parent.id;
+
     }
     ,
+
     init: function () {
         editor.beginPoints = [];
         editor.beginMarks = [];
@@ -394,6 +472,26 @@ var mapControl = {
         //var str = '[{"J":39.91789947393269,"G":116.36744477221691,"lng":116.367445,"lat":39.917899},{"J":39.91184292800211,"G":116.40658356616223,"lng":116.406584,"lat":39.911843},{"J":39.88616249265181,"G":116.37963272998047,"lng":116.379633,"lat":39.886162}]';
         //var arr = mapControl.json2arr(str);
         //mapControl.createPolygon(arr);
+    }, openSaveWindow: function () {
+        if (editor.groupId)
+            //在这里面输入任何合法的js语句
+            editor.layOpen = layer.open({
+                type: 1 //Page层类型
+                , area: ['500px', '200px']
+                , title: '保存绘图'
+                , shade: 0.6 //遮罩透明度
+                , maxmin: true //允许全屏最小化
+                , anim: 1 //0-6的动画形式，-1不开启
+                , content: editor.saveForm
+                , end: function () {
+                    editor.saveForm.hide();
+                }
+            });
+        else
+            layer.alert('你还未选择所属层级', {
+                icon: 5,
+                title: "提示"
+            });
     },
     savePolygon() {
 
@@ -405,13 +503,19 @@ var mapControl = {
         if (groupId) {
 
             var param = [];
+
             for (var index = 0, endIndex = editor.polygonArr.length - 1; index <= endIndex; index++) {
-                param.push({ AreaId: GUID.newGuid(), AreaLngLat: editor.polygonArr[index].getPath(), groupId: groupId });
+                var lngLat = [], polygons = editor.polygonArr[index].getPath(), areaName = $("#area_name").val();;
+                for (var polygonIndex = 0, endPolygonIndex = polygons.length - 1; polygonIndex <= endPolygonIndex; polygonIndex++) {
+                    lngLat.push({ lng: polygons[polygonIndex].lng, lat: polygons[polygonIndex].lat });
+                }
+
+                param.push({ AreaId: GUID.newGuid(), AreaLngLat: JSON.stringify(lngLat), groupId: groupId, parentGroupId: editor.parentId, AreaName: areaName });
             }
             //var lnglat = JSON.stringify(this.editor.resPolygon), areaName = $("#area_name").val();
             //var data = JSON.stringify({ AreaId: GUID.newGuid(), AreaName: areaName, AreaLngLat: lnglat, groupId: groupId });
             //var dataParams = { polygon: JSON.stringify(param) };
-            var dataParams =  JSON.stringify(param) ;
+            var dataParams = JSON.stringify(param);
             console.log(dataParams);
             $.dataService.postPolygon(dataParams, function (data) {
                 console.log(data);
@@ -419,7 +523,7 @@ var mapControl = {
                     icon: 1,
                     title: "提示"
                 });
-                p.layer.close(that.editor.layOpen);
+                parent.layer.close(editor.layOpen);
             }, function (data) {
                 if (data.status === 200) {
                     console.log(data);
@@ -427,7 +531,7 @@ var mapControl = {
                         icon: 1,
                         title: "提示"
                     });
-                    p.layer.close(that.editor.layOpen);
+                    parent.layer.close(editor.layOpen);
                 }
                 else {
                     // console.log(err);
@@ -472,6 +576,35 @@ var mapControl = {
         marker.setMap(map);
         return marker;
     },
+    deletePolygon: function () {
+        if (editor.currentPolygon) {
+            layer.confirm('你是否要删除当前对象', {
+                btn: ['确定', '取消'] //按钮
+            }, function () {
+                var index = editor.currentPolygon.currentIndex;
+                //editor.polygonEditorArr[index].close();
+                editor.polygonArr.splice(index, 1);
+                editor.polygonEditorArr.splice(index, 1);
+                //map.remove(editor.polygonEditorArr[index]);
+                map.remove(editor.currentPolygon);
+                
+                editor.currentPolygon = null;
+            }, function () {
+                //layer.msg('也可以这样', {
+                //    time: 20000, //20s后自动关闭
+                //    btn: ['明白了', '知道了']
+                //});
+            });
+            
+        } else {
+            layer.alert('未选中删除对象', {
+                icon: 5,
+                title: "提示"
+            });
+        }
+        
+    }
+    ,
     //上面用到的几个函数
     //创建一个多边形对象
     createPolygon: function (arr) {
@@ -485,21 +618,35 @@ var mapControl = {
             fillOpacity: 0.35
         });
         polygon.index = editor.polygonEditorArr.length;
-        AMap.event.addListener(polygon, 'rightclick', function () {
+        AMap.event.addListener(polygon, 'rightclick', function (e) {
+            contextmenu.open(map, e.lnglat);
             editor.currentPolygonEditor.close();
             editor.currentPolygonEditor = editor.polygonEditorArr[this.index];
             editor.currentPolygonEditor.open();
+            editor.currentPolygon = this;
         });
         editor.polygonArr.push(polygon);
         return polygon;
+    }, createNoArrPolygon: function (arr) {
+        var polygon = new AMap.Polygon({
+            map: map,
+            path: arr,
+            strokeColor: "#0000ff",
+            strokeOpacity: 1,
+            strokeWeight: 3,
+            fillColor: "#f5deb3",
+            fillOpacity: 0.35
+        });
     },
     mapOnClick: function (e) {
         // document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat()
         editor.beginMarks.push(mapControl.addMarker(e.lnglat));
+        console.log(e.lnglat);
         editor.beginPoints.push(e.lnglat);
         editor.beginNum++;
         if (editor.beginNum == 3) {
             //editor.currentIndex++;
+            console.log(editor.beginPoints);
             AMap.event.removeListener(editor.clickListener);
             var polygon = mapControl.createPolygon(editor.beginPoints);
             editor.currentPolygonEditor = mapControl.createEditor(polygon);

@@ -10,6 +10,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Bingosoft.AMap.Web.Model;
+using Bingosoft.AMap.Common;
+using Bingosoft.AMap.Core.Dto;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,16 +32,19 @@ namespace Bingosoft.AMap.Web.Controllers
         {
             if (ModelState.IsValid)//判断是否合法
             {
-                if (!(viewModel.User == "wyt" && viewModel.Password == "123456"))//判断账号密码是否正确
+                if (string.IsNullOrEmpty(viewModel.User))//判断账号密码是否正确
                 {
                     return BadRequest();
                 }
+                WebServiceRequest webServiceRequest = new WebServiceRequest();
 
-
+                LoginInfoDto userDto = webServiceRequest.SSOLogin(viewModel.User, viewModel.Password);
                 var claim = new Claim[]{
-                    new Claim(ClaimTypes.Name,"wyt"),
+                    new Claim(ClaimTypes.Name,userDto.User.LoginName),
                     new Claim(ClaimTypes.Role,"admin"),
-                    new Claim("ex","testex")
+                    new Claim(ClaimTypesExt.GroupId,userDto.User.GroupID),
+                    new Claim(ClaimTypesExt.LoginNo,userDto.User.LoginNo),
+                    new Claim(ClaimTypesExt.MenuList,userDto.User.MenuList)
                 };
 
                 //对称秘钥

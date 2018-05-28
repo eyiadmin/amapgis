@@ -16,7 +16,11 @@ namespace Bingosoft.AMap.Application.DrawAMap
         void saveDrawArea(AreaDrawInputDto inputDto);
 
         List<AreaDrawOutputDto> GetAreaDrawOutputDtos(int groupId);
+
+        void removeAreaDraw(int groupId);
+
+        List<AreaDrawOutputDto> GetChilrenAreaDrawOutputDtos(int groupId);
     }
 
-    
+
 }

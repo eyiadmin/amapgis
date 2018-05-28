@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Bingosoft.AMap.Core\Bingosoft.AMap.Core.csproj" />
     <ProjectReference Include="..\Dapper\Dapper.csproj" />
   </ItemGroup>
 
